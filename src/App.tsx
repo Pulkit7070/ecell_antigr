@@ -1,10 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import EcellVipsLoader from './components/EcellVipsLoader';
 import HomePage from './pages/HomePage';
 import EventsPage from './pages/EventsPage';
+import OrientationEventPage from './pages/OrientationEventPage';
 import CollaborationsPage from './pages/CollaborationsPage';
 import AboutPage from './pages/AboutPage';
 import MembersPage from './pages/MembersPage';
@@ -49,6 +50,7 @@ function AppContent() {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/events" element={<EventsPage />} />
+            <Route path="/events/ecell-orientation-2026" element={<OrientationEventPage />} />
             <Route path="/collaborations" element={<CollaborationsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/members" element={<MembersPage />} />

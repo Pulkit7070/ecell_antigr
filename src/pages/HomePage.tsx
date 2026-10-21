@@ -78,7 +78,7 @@ const fadeUpVariants = {
     transition: {
       duration: 1,
       delay: 0.5 + i * 0.2,
-      ease: [0.25, 0.4, 0.25, 1],
+      ease: [0.25, 0.4, 0.25, 1] as const,
     },
   }),
 };
@@ -91,7 +91,7 @@ const sectionReveal = {
     scale: 1,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
@@ -105,7 +105,7 @@ const cardReveal = {
     transition: {
       duration: 0.6,
       delay: i * 0.15,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   }),
 };

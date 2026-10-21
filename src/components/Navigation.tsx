@@ -22,7 +22,7 @@ export default function Navigation() {
 
   // Update active index based on current path
   useEffect(() => {
-    const index = navItems.findIndex(item => item.path === location.pathname);
+    const index = navItems.findIndex(item => item.path === location.pathname || (item.path === '/events' && location.pathname.startsWith('/events/')));
     setActiveIndex(index >= 0 ? index : 0);
   }, [location.pathname]);
 
@@ -122,7 +122,7 @@ export default function Navigation() {
             />
 
             {navItems.map((item, index) => {
-              const isActive = location.pathname === item.path;
+              const isActive = location.pathname === item.path || (item.path === '/events' && location.pathname.startsWith('/events/'));
               return (
                 <Link
                   key={item.path}

@@ -451,10 +451,27 @@ export default function EventsPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-neutral-400 max-w-2xl mx-auto"
             >
-              Relive the moments from our events that brought together innovators,
-              entrepreneurs, and industry leaders.
+              Discover what is coming up, then revisit the moments that brought
+              innovators, entrepreneurs, and industry leaders together.
             </motion.p>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="px-6 pb-10" aria-labelledby="featured-event-heading">
+        <div className="max-w-6xl mx-auto">
+          <Link to="/events/ecell-orientation-2026" className="group block overflow-hidden rounded-2xl border border-[#31537a] bg-[#0e1c2d] transition-colors hover:border-[#d3a948] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d3a948]">
+            <div className="grid md:grid-cols-[1fr_230px]">
+              <div className="p-7 md:p-10 flex flex-col justify-center">
+                <span className="text-[#e1b85c] text-xs font-bold uppercase tracking-[0.2em]">Upcoming · 23 October 2026</span>
+                <h2 id="featured-event-heading" className="mt-4 text-3xl md:text-4xl font-bold leading-tight text-white">E-Cell Orientation &amp;<br />Pitch Please Competition</h2>
+                <p className="mt-4 max-w-2xl text-neutral-300">Meet the Entrepreneurship Cell and hear from LLM4S Foundation co-founder Kannupriya Kalra about open source, Scala and a practical route into AI engineering.</p>
+                <p className="mt-5 text-sm text-neutral-300">10 AM onwards <span className="mx-2 text-[#d3a948]">·</span> Seminar Hall, Block-C</p>
+                <span className="mt-7 inline-flex items-center gap-2 font-semibold text-[#e1b85c] group-hover:gap-3 transition-all">View event details <span aria-hidden="true">→</span></span>
+              </div>
+              <img src="/ecell-orientation-poster.jpg" alt="E-Cell Orientation and Pitch Please event poster" className="h-72 md:h-full w-full object-cover object-top" loading="lazy" />
+            </div>
+          </Link>
         </div>
       </section>
 
